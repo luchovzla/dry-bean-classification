@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ML & Dry Bean Categorization</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+  integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
+  crossorigin="anonymous">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+ 
+  <!-- Marker Cluster CSS -->
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+  
+  <!-- Our CSS -->
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/css/city.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <nav class="p-1 navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <img src="Images/comp_1_2.gif" height="42" width="42">
+        <a class="navbar-header" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link font-weight-bold" href="index.html">Dry Bean Categorization<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ML Models</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" target="_blank" href="random_forest.html">Random Forest</a>
+                <a class="dropdown-item" target="_blank" href="svm.html">Support Vector Machine (SVM)?</a>
+                <a class="dropdown-item" target="_blank" href="neural_network.html">Neural Network</a>
+                <a class="dropdown-item" target="_blank" href="knn.html">K Nearest Neighbors (KNN)</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="comparison.html">Analysis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="data_2.html">Credits</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>The Importance of Beans</h1>
+        <p>Through-out the world, beans are a mainstay for many diets. They are cheap, easy to grow, store, and prepare.</p>
+        <p>Beans come in many varieties. They’re packed with protein and fiber while low in fat and calories. In addition, they’re exceptionally 
+        <p>high in a wide variety of vitamins and minerals.<sup>[1]</sup></p>
+        
+      </div>
+    </div>
+    
+    
+    <div class="row">
+      <div class="col-md-12">
+        <div>
+          <h5>Roberto's bar graph</h5>
+          <h5>Select from the following options:</h5>
+          <select id='selectBarGraph' onchange='selectBarGraphChanged(this.value)'>
+          <option value="top10routine">Top 10 for routine inspections</option>
+          <option value="top10followup">Top 10 for Follow-Up inspections</option>
+          <option value="bottom10routine">Bottom 10 for routine inspections</option>
+          <option value="bottom10followup">Bottom 10 for Follow-Up inspections</option>
+          </select>
+        </div>  
+        <div id="bar-graph">
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div id="line-selection">
+          <h5>Luis' line graph</h5>
+          <h5>Select a restaurant to observe its food inspection score history:</h5>
+          <select id='selRestaurant' onchange='restChanged(this.value)'></select>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div id="line-graph"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div id="markers">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- D3 -->
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+
+  <!-- apexcharts -->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+  crossorigin="anonymous"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" 
+  crossorigin="anonymous"></script>
+
+  <!-- MomentJS -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+
+  <!-- Leaflet JS-->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+
+  <!-- Marker Cluster JS -->
+  <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+ 
+  <!-- Plotly -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <!-- Icons -->
+  <script src="static/js/leaflet.extra-markers.min.js"></script>
+
+  <!-- API Key -->
+  <script src="./static/js/config.js"></script>
+
+  <!-- Our JS -->
+  <script src="./static/js/terra.js"></script>
+  <!-- <script src="./static/js/city.js"></script> -->
+  <script src="./static/js/rob.js"></script>
+  
+</body>
+
+</html>

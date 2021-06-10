@@ -1,0 +1,6 @@
+.nav  {
+    display: inline-block;
+    padding: 20px;
+    cursor: pointer;
+    background-color: #45D1E4; /*Whatever color you want goes here, but in Hexadecimal form*/
+}
