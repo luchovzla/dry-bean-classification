@@ -12,24 +12,15 @@
   integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
   crossorigin="anonymous">
 
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-  crossorigin=""/>
- 
-  <!-- Marker Cluster CSS -->
-  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
-  <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
-  
   <!-- Our CSS -->
-  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/style.css">
   <link rel="stylesheet" href="static/css/city.css">
 </head>
 
 <body>
 
   <div class="container">
-    <nav class="p-1 navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <nav style="background-color:rgb(201, 168, 231) !important" class="p-1 navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
         <img src="Images/comp_1_2.gif" height="42" width="42">
         <a class="navbar-header" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -39,80 +30,39 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link font-weight-bold" href="index.html">Dry Bean Categorization<span class="sr-only">(current)</span></a>
+              <a class="nav-link font-weight-bold" href="index.html" style="color: ghostwhite;">Dry Bean Categorization<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ML Models</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" target="_blank" href="random_forest.html">Random Forest</a>
-                <a class="dropdown-item" target="_blank" href="svm.html">Support Vector Machine (SVM)?</a>
+                <a class="dropdown-item" target="_blank" href="mlr.html">Multiple Linear Regression</a>
                 <a class="dropdown-item" target="_blank" href="neural_network.html">Neural Network</a>
                 <a class="dropdown-item" target="_blank" href="knn.html">K Nearest Neighbors (KNN)</a>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" target="_blank" href="comparison.html">Analysis</a>
+              <a class="nav-link" target="_blank" href="analysis.html" style="color: ghostwhite;">Analysis</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" target="_blank" href="data_2.html">Credits</a>
+              <a class="nav-link" target="_blank" href="credits.html" style="color: ghostwhite;">Credits</a>
             </li>
           </ul>
         </div>
       </nav>
     
-    <div class="row">
-      <div class="col-md-12 jumbotron text-center">
-        <h1>The Importance of Beans</h1>
-        <p>Through-out the world, beans are a mainstay for many diets. They are cheap, easy to grow, store, and prepare.</p>
-        <p>Beans come in many varieties. They’re packed with protein and fiber while low in fat and calories. In addition, they’re exceptionally 
-        <p>high in a wide variety of vitamins and minerals.<sup>[1]</sup></p>
-        
-      </div>
-    </div>
-    
-    
-    <div class="row">
-      <div class="col-md-12">
-        <div>
-          <h5>Roberto's bar graph</h5>
-          <h5>Select from the following options:</h5>
-          <select id='selectBarGraph' onchange='selectBarGraphChanged(this.value)'>
-          <option value="top10routine">Top 10 for routine inspections</option>
-          <option value="top10followup">Top 10 for Follow-Up inspections</option>
-          <option value="bottom10routine">Bottom 10 for routine inspections</option>
-          <option value="bottom10followup">Bottom 10 for Follow-Up inspections</option>
-          </select>
-        </div>  
-        <div id="bar-graph">
-          
-        </div>
+    <div style="background-color:rgb(169, 212, 175) !important" class= jumbotron text-center">
+      <div "row" style="text-align: center">
+        <h1 style="color: rgb(42, 116, 42)">Why Beans?</h1>
+        <img class="center" src="Images/turkish_beans.JPG" height="440" width="400">
+        <br>
+        <p>
+          Our Dry Bean Dataset came from the University of California-Irvine website: <a href="https://archive.ics.uci.edu/ml/datasets/Dry+Bean+Dataset#">UCI Bean Dataset</a>
+        </p>  
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-md-12">
-        <div id="line-selection">
-          <h5>Luis' line graph</h5>
-          <h5>Select a restaurant to observe its food inspection score history:</h5>
-          <select id='selRestaurant' onchange='restChanged(this.value)'></select>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-12">
-        <div id="line-graph"></div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-12">
-        <div id="markers">
-        </div>
-      </div>
-    </div>
-  </div>
   
   <!-- D3 -->
   <script src="https://d3js.org/d3.v6.min.js"></script>
