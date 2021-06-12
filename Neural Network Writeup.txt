@@ -14,7 +14,7 @@ The performance of each optimizer was plotted over the number of epochs, measure
 
 ** Insert accuracy graph here **
 
-After 50 iterations of model training, it can be appreciated that the Adam, Nadam and RMSProp optimizers have a virtually identical performance over time. SGD, on the other hand, trails behind the former three.
+After 50 iterations of model training, it can be appreciated that the Adam, Nadam and RMSProp optimizers have a virtually identical performance over time. SGD, on the other hand, noticeably trails behind the former three.
 
 ** Insert losses graph here **
 
