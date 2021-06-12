@@ -1,0 +1,22 @@
+## Classifying different types of dry beans using a Neural Network with different optimizers
+
+One of the Machine Learning algorithms used to tackle this problem was a Neural Network. A multivariate classification problem such as the one presented in this dataset is ideal for this algorithm to solve.
+
+The determination of the architecture of a neural network is highly experimentative. The number of nodes and layers (which would convert it into a Deep Neural Network) to use is a parameter that can be highly tuned and a balance between computer usage/model size and accuracy must be achieved.
+
+For this model, a shallow neural network (a neural network with a single hidden layer) was used. Neural network architecture theory says that the number of nodes in each layer should be between the number of input dimensions and output dimensions, decreasing as the depth of the network increases. Therefore, a hidden layer with 14 nodes was chosen as the architecture of this neural network.
+
+One of the parameters in a neural network model that can be also modified when compiling the model is the optimizer used. Optimizers are methods or algorithms used to change the attributes of a neural network, such as weights and learning rate, to reduce losses.
+
+Four different optimizers: Adam, Nadam, RMSProp and SGD were studied, using the same network and ran over 50 epochs, with shuffling enabled. 
+
+The performance of each optimizer was plotted over the number of epochs, measured by each model's accuracy and losses.
+
+** Insert accuracy graph here **
+
+After 50 iterations of model training, it can be appreciated that the Adam, Nadam and RMSProp optimizers have a virtually identical performance over time. SGD, on the other hand, noticeably trails behind the former three.
+
+** Insert losses graph here **
+
+When the losses are plotted vs. epochs, the behavior of the SGD-optimized model reaffirms that, for this problem, it is the inferior optimizer, presenting a consistently higher loss than the other 3 optimizers.
+
