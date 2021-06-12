@@ -1,0 +1,16 @@
+.nav  {
+    display: inline-block;
+    padding: 20px;
+    cursor: pointer;
+    background-color: #7a6df08f; /*Whatever color you want goes here, but in Hexadecimal form*/
+}
+
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    text-color: rgb(29, 145, 25);
+}
