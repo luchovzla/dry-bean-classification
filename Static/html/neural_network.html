@@ -13,7 +13,7 @@
   crossorigin="anonymous">
 
   <!-- Our CSS -->
-  <link rel="stylesheet" href="static/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -67,27 +67,18 @@
         <p>One of the parameters in a neural network model that can be also modified when compiling the model is the optimizer used. Optimizers are methods or algorithms used to change the attributes of a neural network, such as weights and learning rate, to reduce losses.</p>
         <p>Four different optimizers: Adam, Nadam, RMSProp and SGD were studied, using the same network and ran over 50 epochs, with shuffling enabled.</p> 
         <p>The performance of each optimizer was plotted over the number of epochs, measured by each model's accuracy and losses.</p>
-
-        ** Insert accuracy graph here **
-
-After 50 iterations of model training, it can be appreciated that the Adam, Nadam and RMSProp optimizers have a virtually identical performance over time. SGD, on the other hand, noticeably trails behind the former three.
-
-** Insert losses graph here **
-
-When the losses are plotted vs. epochs, the behavior of the SGD-optimized model reaffirms that, for this problem, it is the inferior optimizer, presenting a consistently higher loss than the other 3 optimizers.
-
-    
-        </p>  
+        <img class="img-center" src="img/optimizer_accuracy.png">
+        <h6 align='center'>Figure 1: Model accuracy vs. epochs ran using 4 different model optimizers.</h6>
+        <br>
+        <p>After 50 iterations of model training (also known as epochs), it can be appreciated that the Adam, Nadam and RMSProp optimizers have a virtually identical performance over time. SGD, on the other hand, noticeably trails behind the former three.</p>
+        <img class="img-center" src="img/optimizer_loss.png">
+        <h6 align='center'>Figure 2: Model loss vs. epochs ran using 4 different model optimizers.</h6>
+        <br>
+        <p>When the losses are plotted vs. epochs ran, the behavior of the SGD-optimized model reaffirms that, for this problem, it is the inferior optimizer, presenting a consistently higher loss than the other 3 optimizers.</p>
       </div>
     </div>
 
   
-  <!-- D3 -->
-  <script src="https://d3js.org/d3.v6.min.js"></script>
-
-  <!-- apexcharts -->
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-
   <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
@@ -98,31 +89,6 @@ When the losses are plotted vs. epochs, the behavior of the SGD-optimized model 
   integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" 
   crossorigin="anonymous"></script>
 
-  <!-- MomentJS -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
-
-  <!-- Leaflet JS-->
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-  crossorigin=""></script>
-
-  <!-- Marker Cluster JS -->
-  <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
- 
-  <!-- Plotly -->
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
-  <!-- Icons -->
-  <script src="static/js/leaflet.extra-markers.min.js"></script>
-
-  <!-- API Key -->
-  <script src="./static/js/config.js"></script>
-
-  <!-- Our JS -->
-  <script src="./static/js/terra.js"></script>
-  <!-- <script src="./static/js/city.js"></script> -->
-  <script src="./static/js/rob.js"></script>
-  
 </body>
 
 </html>
