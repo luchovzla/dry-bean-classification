@@ -13,8 +13,7 @@
   crossorigin="anonymous">
 
   <!-- Our CSS -->
-  <link rel="stylesheet" href="static/style.css">
-  <link rel="stylesheet" href="static/css/city.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -53,23 +52,67 @@
       </nav>
     
     <div style="background-color:rgb(169, 212, 175) !important" class= jumbotron text-center">
-      <div "row" style="text-align: center">
-        <h1 style="color: rgb(42, 116, 42)">This is Luis's Page</h1>
-        <img class="center" src="Images/turkish_beans.JPG" height="440" width="400">
-        <br>
-        <p>
-          Our Dry Bean Dataset came from the University of California-Irvine website: <a href="https://archive.ics.uci.edu/ml/datasets/Dry+Bean+Dataset#">UCI Bean Dataset</a>
-        </p>  
+      <div "row">
+        <h1 style="color: rgb(42, 116, 42)">Classifying different types of dry beans using a Neural Network with different optimizers</h1>
       </div>
     </div>
 
+    <div "row">
+        <p>One of the Machine Learning algorithms used to tackle this problem was a Neural Network. A multivariate classification problem such as the one presented in this dataset is ideal for this algorithm to solve.</p>
+        <p>The determination of the architecture of a neural network is highly experimentative. The number of nodes and layers to use is a parameter that can be highly tuned and a balance between computer usage/model size and accuracy must be achieved.</p>
+        <p>For this model, a shallow neural network (a neural network with a single hidden layer) was used. Neural network architecture theory says that the number of nodes in each layer should be between the number of input dimensions and output dimensions, decreasing as the depth of the network increases. Therefore, a hidden layer with 14 nodes was chosen as the architecture of this neural network.</p>
+        <br>
+        <h2>Effect of using different optimizers in a Neural Network</h2>
+        <br>
+        <p>One of the parameters in a neural network model that can be also modified when compiling the model is the optimizer used. Optimizers are methods or algorithms used to change the attributes of a neural network, such as weights and learning rate, to reduce losses.</p>
+        <p>Four different optimizers: Adam, Nadam, RMSProp and SGD were studied, using the same network and ran over 50 epochs, with shuffling enabled.</p> 
+        <br>
+        <table border="1" class="dataframe" align="center">
+          <thead>
+            <tr style="text-align: center;">
+              <th>Optimizer</th>
+              <th>Accuracy</th>
+              <th>Loss</th>
+            </tr>
+          </thead> 
+          <tbody> 
+            <tr>
+              <th>Adam</th>
+              <td>0.919483</td>
+              <td>0.233923</td>
+            </tr>
+            <tr>
+              <th>Nadam</th>
+              <td>0.916838</td>
+              <td>0.235692</td> 
+            </tr>
+            <tr>
+              <th>RMSProp</th>
+              <td>0.909198</td>
+              <td>0.257166</td>
+            </tr>
+            <tr>
+              <th>SGD</th>
+              <td>0.889509</td>
+              <td>0.358123</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <h6 align='center'>Figure 1: Model accuracy and losses for 4 different model optimizers.</h6>
+        <br>
+        <p>The performance of each optimizer was plotted over the number of epochs, measured by each model's accuracy and losses.</p>
+        <img class="img-center" src="img/optimizer_accuracy.png">
+        <h6 align='center'>Figure 2: Model accuracy vs. epochs ran using 4 different model optimizers.</h6>
+        <br>
+        <p>After 50 iterations of model training (also known as epochs), it can be appreciated that the Adam, Nadam and RMSProp optimizers have a virtually identical performance over time. SGD, on the other hand, noticeably trails behind the former three.</p>
+        <img class="img-center" src="img/optimizer_loss.png">
+        <h6 align='center'>Figure 3: Model loss vs. epochs ran using 4 different model optimizers.</h6>
+        <br>
+        <p>When the losses are plotted vs. epochs ran, the behavior of the SGD-optimized model reaffirms that, for this problem, it is the inferior optimizer, presenting a consistently higher loss than the other 3 optimizers.</p>
+    </div>
+  </div>  
   
-  <!-- D3 -->
-  <script src="https://d3js.org/d3.v6.min.js"></script>
-
-  <!-- apexcharts -->
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-
   <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
@@ -80,31 +123,6 @@
   integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" 
   crossorigin="anonymous"></script>
 
-  <!-- MomentJS -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
-
-  <!-- Leaflet JS-->
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-  crossorigin=""></script>
-
-  <!-- Marker Cluster JS -->
-  <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
- 
-  <!-- Plotly -->
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
-  <!-- Icons -->
-  <script src="static/js/leaflet.extra-markers.min.js"></script>
-
-  <!-- API Key -->
-  <script src="./static/js/config.js"></script>
-
-  <!-- Our JS -->
-  <script src="./static/js/terra.js"></script>
-  <!-- <script src="./static/js/city.js"></script> -->
-  <script src="./static/js/rob.js"></script>
-  
 </body>
 
 </html>
