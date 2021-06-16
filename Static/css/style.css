@@ -1,8 +1,8 @@
-.nav  {
+.nav {
     display: inline-block;
     padding: 20px;
     cursor: pointer;
-    background-color: #7a6df08f; /*Whatever color you want goes here, but in Hexadecimal form*/
+    background-color: #7a6df08f;
 }
 
 .img-center {
