@@ -14,3 +14,8 @@ h1 {
     text-align: center;
     text-color: rgb(29, 145, 25);
 }
+
+hr {
+    border-color: cadetblue;
+    height: 10px;
+}
