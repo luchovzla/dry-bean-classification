@@ -103,6 +103,7 @@
         <br>
         <h6 align='center'>Table 1: Model accuracy and losses for 4 different model optimizers.</h6>
         <br>
+        <p>It can be appreciated that the Adam model has the lowest loss and highest accuracy of all models, though 3 of them (Adam, Nadam and RMSProp) performed roughly equal. The SGD optimizer had an inferior performance, both in accuracy and losses.</p>
         <p>The performance of each optimizer was plotted over the number of epochs, measured by each model's accuracy and losses.</p>
         <img class="img-center" src="img/optimizer_accuracy.png">
         <h6 align='center'>Figure 2: Model accuracy vs. epochs ran using 4 different model optimizers.</h6>
@@ -112,6 +113,7 @@
         <h6 align='center'>Figure 3: Model loss vs. epochs ran using 4 different model optimizers.</h6>
         <br>
         <p>When the losses are plotted vs. epochs ran, the behavior of the SGD-optimized model reaffirms that, for this problem, it is the inferior optimizer, presenting a consistently higher loss than the other 3 optimizers.</p>
+        <p>In conclusion, the best studied architecture for this neural network would be a single hidden layer with 14 nodes, using the Adam optimizer.</p>
     </div>
   </div>  
   
