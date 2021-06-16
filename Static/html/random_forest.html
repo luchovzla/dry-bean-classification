@@ -73,6 +73,31 @@
           and build several smaller, simpler decision trees. Each tree is much simpler because it
           from a subset of the data and is considered a "weak classifier" but, when you combine them, they form a
           "strong classifier".<sup>[1]</sup></p>
+          <p>Our data set consists of 16 features and 7 labels, with the number of estimators set at 100 to get the highest accuracy, which made for very detailed trees.
+            A snippet of the Random Forest Tree is shown below.
+            <p style="font-style: italic;">Click on the tree to enlarge it. Select the "Reset" button when done. [Takes a few seconds to reach full size, so be patient!]</p>
+          <img class="center" src="../../Images/tree.png" height="300" width="800" onclick="enlargeImg()" 
+          id="img1"/>
+          <button onclick="resetImg()">Reset
+          </button>
+          <script>
+            img = document.getElementById("img1");
+            // Function to set image dimensions
+            function enlargeImg() {
+                img.style.width = "2500%";
+                img.style.height = "auto";
+                img.style.transition = "width 0.5s ease";
+            }
+            // Function to reset image dimensions
+            function resetImg() {
+                img.style.width = "60%";
+                img.style.height = "auto";
+                img.style.transition = "width 0.5s ease";
+            }
+        </script>
+          <h3 style="text-align: center; font-family: 'Times New Roman', Times, serif">Figure 1</h3>
+        
+          <br>
         <h6 style="text-align: center;"><sup>[1]</sup>From
           'uofm-stp-data-pt-12-2020-u-c/01-Lesson-Plans_21-Machine-Learning_2_21.2 Classification - Updating.pdf'</h6>
           <hr class="class-6" />
