@@ -12,8 +12,8 @@
   integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
   crossorigin="anonymous">
 
-  <!-- Our CSS -->
-  <link rel="stylesheet" href="../css/style.css">
+  <!-- Random Forest CSS -->
+    <link rel="stylesheet" href="../css/random_forest.css">
 
 </head>
 
@@ -75,7 +75,8 @@
           "strong classifier".<sup>[1]</sup></p>
           <p>Our data set consists of 16 features and 7 labels, with the number of estimators set at 100 to get the highest accuracy, which made for very detailed trees.
             A snippet of the Random Forest Tree is shown below.
-            <p style="font-style: italic;">Click on the tree to enlarge it. Select the "Reset" button when done. [Takes a few seconds to reach full size, so be patient!]</p>
+            <h6 style="font-style: italic; color: rgb(223, 27, 27)">Click on the "tree" image to enlarge it. Select the "Reset" button when done. 
+              [Takes a few seconds to reach full size, so be patient!]</h6>
           <img class="center" src="../../Images/tree.png" height="300" width="800" onclick="enlargeImg()" 
           id="img1"/>
           <button onclick="resetImg()">Reset
@@ -90,7 +91,7 @@
             }
             // Function to reset image dimensions
             function resetImg() {
-                img.style.width = "60%";
+                img.style.width = "100%";
                 img.style.height = "auto";
                 img.style.transition = "width 0.5s ease";
             }

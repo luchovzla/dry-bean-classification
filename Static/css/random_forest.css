@@ -15,6 +15,20 @@ h1 {
     text-color: rgb(29, 145, 25);
 }
 
-.jumbotron{
-    height : 675px;
+hr {
+    border-color: cadetblue;
+    height: 10px;
 }
+
+.jumbotron{
+    height : 600px;
+}
+
+/* img {
+    transition:transform 0.25s ease;
+}
+
+img:hover {
+    -webkit-transform:scale(2); /* or some other value */
+    transform:scale(2);
+} */
