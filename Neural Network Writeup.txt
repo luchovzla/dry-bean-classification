@@ -20,3 +20,4 @@ After 50 iterations of model training, it can be appreciated that the Adam, Nada
 
 When the losses are plotted vs. epochs, the behavior of the SGD-optimized model reaffirms that, for this problem, it is the inferior optimizer, presenting a consistently higher loss than the other 3 optimizers.
 
+    

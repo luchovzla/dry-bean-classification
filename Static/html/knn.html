@@ -8,62 +8,150 @@
   <title>KNN</title>
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
-  integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
-  crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
   <!-- Our CSS -->
   <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    cite {
+      font-style: italic;
+    }
+  </style>
 
 </head>
 
 <body>
 
   <div class="container">
-    <nav style="background-color:rgb(201, 168, 231) !important" class="p-1 navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-        <img src="../../Images/comp_1_2.gif" height="42" width="42">
-        <a class="navbar-header" href="#"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link font-weight-bold" href="index.html" style="color: ghostwhite;">Dry Bean Categorization<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ML Models</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" target="_blank" href="random_forest.html">Random Forest</a>
-                <a class="dropdown-item" target="_blank" href="mlr.html">Multiple Linear Regression</a>
-                <a class="dropdown-item" target="_blank" href="neural_network.html">Neural Network</a>
-                <a class="dropdown-item" target="_blank" href="knn.html">K Nearest Neighbors (KNN)</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" target="_blank" href="analysis.html" style="color: ghostwhite;">Analysis</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" target="_blank" href="credits.html" style="color: ghostwhite;">Credits</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    
-    <div style="background-color:rgb(169, 212, 175) !important" class= jumbotron text-center">
-      <div "row" style="text-align: center">
-        <h1 style="color: rgb(42, 116, 42)">This is Roberto's Page</h1>
-        <img class="center" src="../../Images/turkish_beans.JPG" height="400" width="400">
+    <nav style="background-color:rgb(201, 168, 231) !important"
+      class="p-1 navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+      <img src="../../Images/comp_1_2.gif" alt="Dancing beans" height="42" width="42">
+      <a class="navbar-header" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link font-weight-bold" href="index.html" style="color: ghostwhite;">Dry Bean
+              Categorization<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ML Models</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" target="_blank" href="random_forest.html">Random Forest</a>
+              <a class="dropdown-item" target="_blank" href="mlr.html">Multiple Linear Regression</a>
+              <a class="dropdown-item" target="_blank" href="neural_network.html">Neural Network</a>
+              <a class="dropdown-item" target="_blank" href="knn.html">K Nearest Neighbors (KNN)</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="analysis.html" style="color: ghostwhite;">Analysis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="credits.html" style="color: ghostwhite;">Credits</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div style="background-color:rgb(169, 212, 175) !important" class="jumbotron text-center">
+      <div style="text-align: center">
+        <h1 style="color: rgb(42, 116, 42)">K-Nearest Neighbor (KNN) Machine Learning Algorithm</h1>
+        <img class="center" src="img/knn3.png" alt="knn" height="400" width="440">
+
         <br>
         <p>
-          Our Dry Bean Dataset came from the University of California-Irvine website: <a href="https://archive.ics.uci.edu/ml/datasets/Dry+Bean+Dataset#">UCI Bean Dataset</a>
-        </p>  
+        </p>
       </div>
     </div>
+    <div style="left: auto;">
+      KNN is a non-parametric classification method. It is an approach to data classification that estimates how likely
+      a data point is to be a member of one group or the other depending on what group the data points nearest to it are
+      in.
 
-  
+      Here’s the basic idea of how k-NN works: suppose there are two different classes, Class A and Class B, in the
+      dataset.
+      Now we have a new data point, which is the red, pentagon-shaped point on the plot below and we want to predict
+      which class this new data point belongs to. When k = 3, there are 2 Class B and 1 Class A in the 3 nearest
+      neighbors of the new data point. The simple majority vote is Class B. Therefore, we predict the new data point
+      belongs to Class B.
+
+      <div style="left: auto;">
+        <h2>Pros and Cons of KNN</h2>
+        <h3>Pros</h3>
+        <ul class="list">
+          <li>
+            <p>It is a very simple algorithm to understand.</p>
+          </li>
+          <li>
+            <p>It is very useful for nonlinear data.</p>
+          </li>
+          <li>
+            <p>It is an algorithm we can use for classification as well as regression.</p>
+          </li>
+          <li>It has relatively high accuracy but there are much better-supervised learning models than KNN.</li>
+        </ul>
+        <h3>Cons</h3>
+        <ul class="list">
+          <li>
+            <p>It uses huge computational resources because it stores all the training data.</p>
+          </li>
+          <li>
+            <p>High memory storage required as compared to other supervised learning algorithms.</p>
+          </li>
+          <li>
+            <p>Prediction is slow when the number of most similar cases, or neighbors is large.</p>
+          </li>
+          <li>
+            <p>It is very sensitive to the scale of data as well as irrelevant features.</p>
+          </li>
+        </ul>
+      </div>
+      <div style="left: auto;">
+        <h2>Applications of KNN</h2>
+        <ul class="list">
+          <li>
+            <p>Banking System: KNN can be used in the banking system to predict whether an individual is fit for loan
+              approval.
+            </p>
+          </li>
+          <li>
+            <p>Politics: With the help of KNN algorithms, we can classify a potential voter into various classes like
+              “Will Vote”, “Will not Vote”, “Will Vote to Party One".</p>
+        </ul>
+      </div>
+    </div>
+    <div style="left: auto;">
+      <h2>Selecting K in KNN</h2>
+      <img src="img/knn_training_accuracy.png" alt="Selecting K" height="362" width="392">
+
+    </div>
+    <div style="left: auto;">
+      <h2>Validating K using Cross-Validation for Classification</h2>
+      <img src="img/knn_crossvalidation_accuracy.png" alt="Validating K using Cross-validation" height="362"
+        width="392">
+
+    </div>
+
+    <div>
+      <br>
+      <p><cite>Credits</cite></p>
+      <p><cite>KNN Algorithm - Finding Nearest Neighbors</cite>
+        https://www.tutorialspoint.com/machine_learning_with_python/machine_learning_with_python_knn_algorithm_finding_nearest_neighbors.htm.
+      </p>
+      <p><cite>k-nearest neighbors algorithm</cite> https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm</p>
+      <p><cite>Science Direct k-nearest neighbors</cite>
+        https://www.sciencedirect.com/topics/immunology-and-microbiology/k-nearest-neighbor</p>
+      <p><cite>Cross-validation using KNN</cite> https://towardsdatascience.com/cross-validation-using-knn-6babb6e619c8
+      </p>
+
+    </div>
+  </div>
   <!-- D3 -->
   <script src="https://d3js.org/d3.v6.min.js"></script>
 
@@ -71,16 +159,15 @@
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
   <!-- Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
-  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
 
   <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" 
-  integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" 
-  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
 
-  
 </body>
 
 </html>
