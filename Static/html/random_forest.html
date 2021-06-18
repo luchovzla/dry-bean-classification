@@ -53,76 +53,78 @@
         </ul>
       </div>
     </nav>
-
+  
     <div style="background-color:rgb(169, 212, 175) !important" class=jumbotron text-center">
-      <div "row" style="text-align: center">
+      <div style="text-align: center">
         <h1 style="color: rgb(42, 116, 42)">Decision Tree vs Random Forest</h1>
         <img class="center" src="../../Images/forest_pic.png" height="400" width="400">
-        </div>
-    </div>
-    <h3 style="color: rgb(42, 116, 42); text-align: center">Comparison of a Decision Tree Model and a Random Forest Model</h3>
-        <p style="text-align: left;">In a Random Forest classifier, a whole bunch of trees get to "vote", whereas, with
-          a Decision Tree classfier, only one tree "votes". Decision Trees can be
-          very complex and are hard to generalize. A Random Forest algorithm, on the other hand, will sample the data
-          and build several smaller, simpler decision trees. Each tree is much simpler because it
-          from a subset of the data and is considered a "weak classifier" but, when you combine them, they form a
-          "strong classifier".<sup>[1]</sup></p>
-          <p>Our data set consists of 16 features and 7 labels, with the number of estimators set at 100 to get the highest accuracy, which made for very detailed trees.
-            A snippet of the Random Forest Tree is shown below.
-            <h6 style="font-style: italic; color: rgb(223, 27, 27)">Click on the "tree" image to enlarge it. Select the "Reset" button when done. 
-              [Takes a few seconds to reach full size, so be patient!]</h6>
-          <img class="center" src="../../Images/tree.png" height="300" width="800" onclick="enlargeImg()" 
-          id="img1"/>
-          <button onclick="resetImg()">Reset
-          </button>
-          <script>
-            img = document.getElementById("img1");
-            // Function to set image dimensions
-            function enlargeImg() {
-                img.style.width = "2500%";
-                img.style.height = "auto";
-                img.style.transition = "width 0.5s ease";
-            }
-            // Function to reset image dimensions
-            function resetImg() {
-                img.style.width = "100%";
-                img.style.height = "auto";
-                img.style.transition = "width 0.5s ease";
-            }
-        </script>
-          <h3 style="text-align: center; font-family: 'Times New Roman', Times, serif">Figure 1</h3>
-        
-          <br>
-        <h6 style="text-align: center;"><sup>[1]</sup>From
-          'uofm-stp-data-pt-12-2020-u-c/01-Lesson-Plans_21-Machine-Learning_2_21.2 Classification - Updating.pdf'</h6>
-          <hr class="class-6" />
-        <div class="row">
-          <div class="col-md-12">
-            <h3 style="color: rgb(42, 116, 42); text-align: center">Comparison of Feature Importances</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <p style="text-align: center;"><b>The Top 3 Feature Importances for the Decision Tree are:</b></p>
-            <ol>
-              <li>MajorAxisLength</li>
-              <li>ShapeFactor1</li>
-              <li>Perimeter</li>
-              </ol>
-            <img class="center" src="../../Images/Decision_Tree_Importances.png" height='500' width='440'>
-          </div>
-          <div class="col-md-6">
-            <p style="text-align: center;"><b>The Top 3 Feature Importances for the Random Forest are:</b></p>
-            <ol>
-              <li>Compactness</li>
-              <li>Perimeter</li>
-              <li>MinorAxisLength</li>
-              </ol>
-            <img class="center" src="../../Images/Random_Forest_Importances.png" height='500' width='440'>
-          </div>
-        </div>
       </div>
+    </div>
+    <h3 style="color: rgb(42, 116, 42); text-align: center">Comparison of a Decision Tree Model and a Random Forest Model
+    </h3>
+    <p style="text-align: left;">In a Random Forest classifier, a whole bunch of trees get to "vote", whereas, with
+      a Decision Tree classfier, only one tree "votes". Decision Trees can be
+      very complex and are hard to generalize. A Random Forest algorithm, on the other hand, will sample the data
+      and build several smaller, simpler decision trees. Each tree is much simpler because it
+      from a subset of the data and is considered a "weak classifier" but, when you combine them, they form a
+      "strong classifier".<sup>[1]</sup></p>
+    <p>Our data set consists of 16 features and 7 labels, with the number of estimators set at 100 to get the highest
+      accuracy.</p>
+      <p>A snippet of the Random Forest Tree is shown below.</p>
+      <h6 style="text-align: left;"><sup>[1]</sup>From
+        'uofm-stp-data-pt-12-2020-u-c/01-Lesson-Plans_21-Machine-Learning_2_21.2 Classification - Updating.pdf'</h6>
+        <hr class="class-6" />
+    <h6 style="font-style: italic; color: rgb(223, 27, 27); text-align: center;">Click on the "tree" image to enlarge it. Select the "Reset"
+      button when done.
+      [It takes a few seconds to reach full size, so be patient!]</h6>
+    <img class="center" src="../../Images/tree.png" height="300" width="800" onclick="enlargeImg()" id="img1" />
+    <button onclick="resetImg()">Reset
+    </button>
+    <script>
+      img = document.getElementById("img1");
+      // Function to set image dimensions
+      function enlargeImg() {
+        img.style.width = "2500%";
+        img.style.height = "auto";
+        img.style.transition = "width 0.5s ease";
+      }
+      // Function to reset image dimensions
+      function resetImg() {
+        img.style.width = "100%";
+        img.style.height = "auto";
+        img.style.transition = "width 0.5s ease";
+      }
+    </script>
+        <h6 style="text-align: center;">Figure 1</h6>
+    <br>
+    <hr class="class-6" />
+    <div class="row">
+      <div class="col-md-12">
+        <h3 style="color: rgb(42, 116, 42); text-align: center">Comparison of Feature Importances</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <p style="text-align: center;"><b>The Top 3 Feature Importances for the Decision Tree are:</b></p>
+        <ol>
+          <li>MajorAxisLength</li>
+          <li>ShapeFactor1</li>
+          <li>Perimeter</li>
+        </ol>
+        <img class="center" src="../../Images/Decision_Tree_Importances.png" height="500" width="440">
+      </div>
+      <div class="col-md-6">
+        <p style="text-align: center;"><b>The Top 3 Feature Importances for the Random Forest are:</b></p>
+        <ol>
+          <li>Compactness</li>
+          <li>Perimeter</li>
+          <li>MinorAxisLength</li>
+        </ol>
+        <img class="center" src="../../Images/Random_Forest_Importances.png" height="500" width="440">
+      </div>
+    </div>
   </div>
+
 
 
 

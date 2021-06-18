@@ -43,7 +43,10 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" target="_blank" href="/Static/html/credits.html" style="color: ghostwhite;">Credits</a>
+              <a class="nav-link" target="_blank" href="analysis.html" style="color: ghostwhite;">Analysis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="credits.html" style="color: ghostwhite;">Credits</a>
             </li>
           </ul>
         </div>
@@ -51,8 +54,8 @@
     
     <div style="background-color:rgb(169, 212, 175) !important" class= "jumbotron text-center">
       <div "row" style="text-align: center">
-        <h1 style="color: rgb(42, 116, 42)">Classifying Dry Beans using Multiple Linear Regression</h1>
-        <img class="img-center" src="../../Images/maxresdefault.jpg">
+        <h1 style="color: rgb(42, 116, 42)">Multiple Linear Regression</h1>
+        <img class="center" src="../../Images/maxresdefault.jpg" height="400" width="540">
         <br>
       </div>
     </div> 
@@ -60,17 +63,24 @@
         <div "row">
           <p>Multiple Linear Regression (MLR) is an extension of simple linear regression. It is used when we want to predict the value of a variable based on the value of two or more other variables. The variable we want to predict is called the dependent variable (or sometimes, the outcome, target or criterion variable). The variables we are using to predict the value of the dependent variable are called the independent variables (or sometimes, the predictor, explanatory or regressor variables).<sup>[1]</sup></p>
           <p>
+            <hr class="class-6" />
+          <h2 style="color: rgb(42, 116, 42); text-align: center;">Why MLR doesn't work for our data set</h2>
           <br>
-          <h2>Why MLR doesn't work for our data set</h2>
-          <br>
-          <p>The reason MLR didn't work for our data set is that there is no linear relationship between (a) the dependent variable and each of your independent variables, and (b) the dependent variable and the independent variables collectively. Also another reason is that are data does have some multicollinearity, which occurs when you have two or more independent variables that are highly correlated with each other. This leads to problems with understanding which independent variable contributes to the variance explained in the dependent variable, as well as technical issues in calculating a multiple regression model.</p>
+          <p>The reason MLR didn't work for this data set is that there is no linear relationship between:</p>
+            <ol type="a">
+              <li>the dependent variable and each of the independent variables, and</li>
+              <li>the dependent variable and the independent variables collectively.</li>
+            </ol>
+            <p>Another reason is because the data <i>does</i> have some multicollinearity, which occurs when you have two or more independent variables that are highly correlated with each other. This leads to problems with understanding which independent variable contributes to the variance explained in the dependent variable, as well as technical issues in calculating a Multiple Regression Model.</p>
           <br>
           <img class="img-center" src="\Images\MLR.png">
           <br>
-          <h3>Analysis</h3>
-          The training score I got was .582775 and the test score was .577572. Which for us is not acceptable for us, whichis why we would lean on other models.
+          <h3 style="color: rgb(42, 116, 42); text-align: center;">Analysis</h3>
+          The resulting training score was 0.582775 and the test score was 0.577572. These scores are much lower than the scores from the other models used in this project - most of which had scores closer to 0.92.
        </div>
-         <p><sup>[1]</sup> https://statistics.laerd.com/spss-tutorials/multiple-regression-using-spss-statistics.php</p> 
+    
+       <hr class="class-6" />
+         <h6><sup>[1]</sup> https://statistics.laerd.com/spss-tutorials/multiple-regression-using-spss-statistics.php</h6> 
          
       </div>
     </div>
