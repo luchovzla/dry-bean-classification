@@ -1,18 +1,23 @@
-.nav  {
+.nav {
     display: inline-block;
     padding: 20px;
     cursor: pointer;
-    background-color: #7a6df08f; /*Whatever color you want goes here, but in Hexadecimal form*/
+    background-color: #7a6df08f;
 }
 
 .img-center {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    max-width: 50%;
+    height: auto;
 }
 
 h1 {
     text-align: center;
     text-color: rgb(29, 145, 25);
+}
+
+.jumbotron{
+    height : 675px;
 }
