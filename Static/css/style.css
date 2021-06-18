@@ -15,9 +15,9 @@
 
 h1 {
     text-align: center;
-    text-color: rgb(29, 145, 25);
+    color: rgb(29, 145, 25);
 }
 
-.jumbotron{
-    height : 675px;
+.jumbotron {
+    max-height : 600px;
 }
