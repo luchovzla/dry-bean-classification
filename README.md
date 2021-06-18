@@ -1,4 +1,3 @@
-# dry-bean-classification
 # Machine Learning Final Project - University of Minnesota Data Analytics Bootcamp - 2021 Cohort
 
 
