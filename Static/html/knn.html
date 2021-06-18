@@ -36,7 +36,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link font-weight-bold" href="index.html" style="color: ghostwhite;">Dry Bean
+            <a class="nav-link font-weight-bold" href="../../index.html" style="color: ghostwhite;">Dry Bean
               Categorization<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item dropdown">
@@ -48,9 +48,6 @@
               <a class="dropdown-item" target="_blank" href="neural_network.html">Neural Network</a>
               <a class="dropdown-item" target="_blank" href="knn.html">K Nearest Neighbors (KNN)</a>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" target="_blank" href="analysis.html" style="color: ghostwhite;">Analysis</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" target="_blank" href="credits.html" style="color: ghostwhite;">Credits</a>
@@ -70,16 +67,11 @@
       </div>
     </div>
     <div style="left: auto;">
-      KNN is a non-parametric classification method. It is an approach to data classification that estimates how likely
-      a data point is to be a member of one group or the other depending on what group the data points nearest to it are
-      in.
-
-      Here’s the basic idea of how k-NN works: suppose there are two different classes, Class A and Class B, in the
-      dataset.
-      Now we have a new data point, which is the red, pentagon-shaped point on the plot below and we want to predict
-      which class this new data point belongs to. When k = 3, there are 2 Class B and 1 Class A in the 3 nearest
-      neighbors of the new data point. The simple majority vote is Class B. Therefore, we predict the new data point
-      belongs to Class B.
+      <p>K Nearest Neighbors (KNN) is a non-parametric classification method. It is an approach to data classification
+        that estimates how likely
+        a data point is to be a member of one group or the other depending on what group the data points nearest to it
+        are
+        in.</p>
 
       <div style="left: auto;">
         <h2>Pros and Cons of KNN</h2>
@@ -128,13 +120,12 @@
     </div>
     <div style="left: auto;">
       <h2>Selecting K in KNN</h2>
-      <img src="img/knn_training_accuracy.png" alt="Selecting K" height="362" width="392">
+      <img src="img/knn_training_accuracy.png" alt="Selecting K" class='img-center'>
 
     </div>
     <div style="left: auto;">
       <h2>Validating K using Cross-Validation for Classification</h2>
-      <img src="img/knn_crossvalidation_accuracy.png" alt="Validating K using Cross-validation" height="362"
-        width="392">
+      <img src="img/knn_crossvalidation_accuracy.png" alt="Validating K using Cross-validation" class='img-center'>
 
     </div>
 
@@ -149,7 +140,6 @@
         https://www.sciencedirect.com/topics/immunology-and-microbiology/k-nearest-neighbor</p>
       <p><cite>Cross-validation using KNN</cite> https://towardsdatascience.com/cross-validation-using-knn-6babb6e619c8
       </p>
-
     </div>
   </div>
   <!-- D3 -->
