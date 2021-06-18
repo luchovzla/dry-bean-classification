@@ -70,7 +70,7 @@
       "strong classifier".<sup>[1]</sup></p>
     <p>Our data set consists of 16 features and 7 labels, with the number of estimators set at 100 to get the highest
       accuracy.</p>
-      <p>A snippet of the Random Forest Tree is shown below.</p>
+      <p>Figure 1 below shows one tree from the Random Forest classifier.</p>
       <h6 style="text-align: left;"><sup>[1]</sup>From
         'uofm-stp-data-pt-12-2020-u-c/01-Lesson-Plans_21-Machine-Learning_2_21.2 Classification - Updating.pdf'</h6>
         <hr class="class-6" />
@@ -123,6 +123,61 @@
         <img class="center" src="../../Images/Random_Forest_Importances.png" height="500" width="440">
       </div>
     </div>
+    <hr class="class-6" />
+    <div class="row">
+      <div class="col-md-12">
+        <h3 style="color: rgb(42, 116, 42); text-align: center">Optimizing the Results</h3>
+        <p>One of the hyper-parameters that can be used to optimize the results of the Random Forest Model is changing the "number of trees" used in the model. 
+          The table on the left shows four different values for the n_estimator, and the resulting accuracy score. </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <p style="text-align: center;"><b>Hyper-Tuning w/ 'n_estimator'</b></p>
+        <table border="1" class="dataframe" align="center" style="text-align: center;">
+          <thead>
+            <tr style="text-align: center;">
+              <th>n_estimator<br> value</th>
+              <th>Test Score</th>
+              <th>Train Score</th>
+            </tr>
+          </thead> 
+          <tbody> 
+            <tr>
+              <th>20</th>
+              <td>0.998</td>
+              <td>0.916</td>
+            </tr>
+            <tr>
+              <th>50</th>
+              <td>0.999</td>
+              <td>0.921</td> 
+            </tr>
+            <tr>
+              <th>100</th>
+              <td>1.0</td>
+              <td>0.922</td>
+            </tr>
+            <tr>
+              <th>200</th>
+              <td>1.0</td>
+              <td>0.919</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-6">
+        <br>
+        <br>
+        <p style="text-align: center;"><i>While adjusting the 'n_estimator' did not make a huge difference, the value of '100' returned the highest train and test scores, <b>1.0</b> and <b>0.922</b> 
+          respectively. Prior to fine-tuning, the test score using the Random Forest classifer was 0.9203. The score only improved by 0.002 upon adjusting the 'n_estimator'.</i></p>
+      </div>
+    </div>
+    <hr class="class-6" />
+    <h3 style="color: rgb(42, 116, 42); text-align: center">Analysis</h3>
+    <p>In conclusion, the Decision Tree test score was 0.8956, while the Random Forest test score (prior to fine-tuning) was 0.9203, an improvement of 0.25 over the Decision Tree classifier, 
+      and with an additional improvement of 0.027 after fine-tuning, for a high score of <b>0.922</b>.</p>
+      <br>
   </div>
 
 
