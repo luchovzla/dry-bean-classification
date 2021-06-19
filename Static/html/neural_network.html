@@ -13,7 +13,7 @@
   crossorigin="anonymous">
 
   <!-- Our CSS -->
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -21,7 +21,7 @@
 
   <div class="container">
     <nav style="background-color:rgb(201, 168, 231) !important" class="p-1 navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-        <img src="../../Images/comp_1_2.gif" height="42" width="42">
+        <img src="Images/comp_1_2.gif" height="42" width="42">
         <a class="navbar-header" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +30,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link font-weight-bold" href="/index.html" style="color: ghostwhite;">Dry Bean Categorization<span class="sr-only">(current)</span></a>
+              <a class="nav-link font-weight-bold" href="index.html" style="color: ghostwhite;">Dry Bean Categorization<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -53,7 +53,7 @@
 
       <div>
         <h1 style="color: rgb(42, 116, 42)">Neural Network Machine Learning</h1>
-        <img class="img-center" src="../../Images/1200px-Neural_network_example.png" height="400" width="400">
+        <img class="img-center" src="Images/1200px-Neural_network_example.png" height="400" width="400">
       </div>
       <h6 align='center'>Figure 1: Representation of a simple neural network. Credit: Wikipedia</h6>
     </div>
@@ -103,11 +103,11 @@
         <br>
         <p>It can be appreciated that the Adam model has the lowest loss and highest accuracy of all models, though 3 of them (Adam, Nadam and RMSProp) performed roughly equal. The SGD optimizer had an inferior performance, both in accuracy and losses.</p>
         <p>The performance of each optimizer was plotted over the number of epochs, measured by each model's accuracy and losses.</p>
-        <img class="img-center" src="../../Images/optimizer_accuracy.png">
+        <img class="img-center" src="Images/optimizer_accuracy.png">
         <h6 align='center'>Figure 2: Model accuracy vs. epochs run using 4 different model optimizers.</h6>
         <br>
         <p>After 50 iterations of model training (also known as epochs), it can be appreciated that the Adam, Nadam and RMSProp optimizers have a virtually identical performance over time. SGD, on the other hand, noticeably trails behind the former three.</p>
-        <img class="img-center" src="../../Images/optimizer_loss.png">
+        <img class="img-center" src="Images/optimizer_loss.png">
         <h6 align='center'>Figure 3: Model loss vs. epochs run using 4 different model optimizers.</h6>
         <br>
         <p>When the losses are plotted vs. epochs run, the behavior of the SGD-optimized model reaffirms that, for this problem, it is the inferior optimizer, presenting a consistently higher loss than the other 3 optimizers.</p>

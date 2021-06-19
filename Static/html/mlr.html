@@ -13,7 +13,7 @@
   crossorigin="anonymous">
 
   <!-- Our CSS -->
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="style.css">
  
 </head>
 
@@ -21,7 +21,7 @@
 
   <div class="container">
     <nav style="background-color:rgb(201, 168, 231) !important" class="p-1 navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-        <img src="../../Images/comp_1_2.gif" height="42" width="42">
+        <img src="Images/comp_1_2.gif" height="42" width="42">
         <a class="navbar-header" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,16 +30,16 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link font-weight-bold" href="../../index.html" style="color: ghostwhite;">Dry Bean Categorization<span class="sr-only">(current)</span></a>
+              <a class="nav-link font-weight-bold" href="index.html" style="color: ghostwhite;">Dry Bean Categorization<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ML Models</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="/Static/html/random_forest.html">Random Forest</a>
-                <a class="dropdown-item" href="/Static/html/mlr.html">Multiple Linear Regression</a>
-                <a class="dropdown-item" href="/Static/html/neural_network.html">Neural Network</a>
-                <a class="dropdown-item" href="/Static/html/knn.html">K Nearest Neighbors (KNN)</a>
+                <a class="dropdown-item" href="random_forest.html">Random Forest</a>
+                <a class="dropdown-item" href="mlr.html">Multiple Linear Regression</a>
+                <a class="dropdown-item" href="neural_network.html">Neural Network</a>
+                <a class="dropdown-item" href="knn.html">K Nearest Neighbors (KNN)</a>
               </div>
             </li>
             <li class="nav-item">
@@ -52,7 +52,7 @@
     <div style="background-color:rgb(169, 212, 175) !important" class= "jumbotron text-center">
       <div "row" style="text-align: center">
         <h1 style="color: rgb(42, 116, 42)">Multiple Linear Regression</h1>
-        <img class="center" src="../../Images/maxresdefault.jpg" height="400" width="540">
+        <img class="center" src="Images/maxresdefault.jpg" height="400" width="540">
         <br>
       </div>
     </div> 
@@ -70,7 +70,7 @@
             </ol>
             <p>Another reason is because the data <i>does</i> have some multicollinearity, which occurs when you have two or more independent variables that are highly correlated with each other. This leads to problems with understanding which independent variable contributes to the variance explained in the dependent variable, as well as technical issues in calculating a Multiple Regression Model.</p>
           <br>
-          <img class="img-center" src="\Images\MLR.png">
+          <img class="img-center" src="Images/MLR.png">
           <br>
           <h3 style="color: rgb(42, 116, 42); text-align: center;">Analysis</h3>
           The resulting training score was 0.582775 and the test score was 0.577572. These scores are much lower than the scores from the other models used in this project - most of which had scores closer to 0.92.
@@ -81,13 +81,6 @@
          
       </div>
     </div>
-
-  
-  <!-- D3 -->
-  <script src="https://d3js.org/d3.v6.min.js"></script>
-
-  <!-- apexcharts -->
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
   <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
