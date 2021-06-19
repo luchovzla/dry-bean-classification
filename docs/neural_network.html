@@ -78,42 +78,42 @@
           <tbody> 
             <tr>
               <th>Adam</th>
-              <td>0.919483</td>
-              <td>0.233923</td>
+              <td>0.919189</td>
+              <td>0.234191</td>
             </tr>
             <tr>
               <th>Nadam</th>
-              <td>0.916838</td>
-              <td>0.235692</td> 
+              <td>0.917426</td>
+              <td>0.227227</td> 
             </tr>
             <tr>
               <th>RMSProp</th>
-              <td>0.909198</td>
-              <td>0.257166</td>
+              <td>0.908022</td>
+              <td>0.252093</td>
             </tr>
             <tr>
               <th>SGD</th>
-              <td>0.889509</td>
-              <td>0.358123</td>
+              <td>0.901851</td>
+              <td>0.292712</td>
             </tr>
           </tbody>
         </table>
         <br>
         <h6 align='center'>Table 1: Model accuracy and losses for 4 different model optimizers.</h6>
         <br>
-        <p>It can be appreciated that the Adam model has the lowest loss and highest accuracy of all models, though 3 of them (Adam, Nadam and RMSProp) performed roughly equal. The SGD optimizer had an inferior performance, both in accuracy and losses.</p>
+        <p>It can be appreciated that the Adam model has the lowest loss and highest accuracy of all models, though 2 of them (Adam and Nadam) performed roughly equal. The SGD and RMSProp optimizers had an inferior performance, both in accuracy and losses.</p>
         <p>The performance of each optimizer was plotted over the number of epochs, measured by each model's accuracy and losses.</p>
         <img class="img-center" src="Images/optimizer_accuracy.png">
         <h6 align='center'>Figure 2: Model accuracy vs. epochs run using 4 different model optimizers.</h6>
         <br>
-        <p>After 50 iterations of model training (also known as epochs), it can be appreciated that the Adam, Nadam and RMSProp optimizers have a virtually identical performance over time. SGD, on the other hand, noticeably trails behind the former three.</p>
+        <p>After 50 iterations of model training (also known as epochs), it can be appreciated that the Adam and Nadam optimizers have a virtually identical performance over time. RMSProp and SGD, on the other hand, noticeably trails behind the former three.</p>
         <img class="img-center" src="Images/optimizer_loss.png">
         <h6 align='center'>Figure 3: Model loss vs. epochs run using 4 different model optimizers.</h6>
         <br>
         <p>When the losses are plotted vs. epochs run, the behavior of the SGD-optimized model reaffirms that, for this problem, it is the inferior optimizer, presenting a consistently higher loss than the other 3 optimizers.</p>
         <h2 style="color: rgb(42, 116, 42); text-align: center;">Analysis</h2>
         <p>In conclusion, the best studied architecture for this neural network would be a single hidden layer with 14 nodes, using the Adam optimizer. The resulting model
-          had an accuracy of 0.920 and a loss of 0.234.
+          had an accuracy of 0.919 and a loss of 0.234, though both Adam and Nadam optimizers are interchangeable regarding both accuracy and losses.
         </p>
     </div>
   </div>  
