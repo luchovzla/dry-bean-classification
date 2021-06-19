@@ -8,4 +8,6 @@ We used the following classifications and regressions to make our predictions: K
 
 Our team members included Joe Raasch, Luis Gomez, Roberto Pupo and Terra Vaughn.
 
+Website Framework Credits to Farshad Esnaashari's Final Project Page: [Machine Learning and Heart Disease Prediction](https://esnaaf1.github.io/ML_Project/website/index.html)
+
 To view the full analysis and to find out more about each model, visit this website: [ML Final Project](https://github.com/luchovzla/dry-bean-classification.git).
