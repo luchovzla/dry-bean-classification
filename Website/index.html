@@ -13,7 +13,7 @@
   crossorigin="anonymous">
 
   <!-- Our CSS -->
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -21,7 +21,7 @@
 
   <div class="container-fluid">
     <nav style="background-color:rgb(201, 168, 231) !important" class="p-1 navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-        <img src="../../Images/comp_1_2.gif" height="42" width="42">
+        <img src="Images/comp_1_2.gif" height="42" width="42">
         <a class="navbar-header" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,14 +36,14 @@
               <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ML Models</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="/Static/html/random_forest.html">Random Forest</a>
-                <a class="dropdown-item" href="/Static/html/mlr.html">Multiple Linear Regression</a>
-                <a class="dropdown-item" href="/Static/html/neural_network.html">Neural Network</a>
-                <a class="dropdown-item" href="/Static/html/knn.html">K Nearest Neighbors (KNN)</a>
+                <a class="dropdown-item" href="random_forest.html">Random Forest</a>
+                <a class="dropdown-item" href="mlr.html">Multiple Linear Regression</a>
+                <a class="dropdown-item" href="neural_network.html">Neural Network</a>
+                <a class="dropdown-item" href="knn.html">K Nearest Neighbors (KNN)</a>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/Static/html/analysis.html" style="color: ghostwhite;">Analysis</a>
+              <a class="nav-link" href="analysis.html" style="color: ghostwhite;">Analysis</a>
             </li>
           </ul>
         </div>
@@ -52,7 +52,7 @@
       <div style="background-color:rgb(169, 212, 175) !important" class=jumbotron text-left">
         <div style="text-align: center">
         <h1 style="color: rgb(42, 116, 42)">Why Beans?</h1>
-        <img class="center" src="../../Images/turkish_beans.JPG" height="440" width="400">
+        <img class="center" src="Images/turkish_beans.JPG" height="440" width="400">
         <br>
         <br>
         <p style="text-align: left;">Through-out the world, beans are a mainstay for many diets. They are easy to grow, store, and prepare while also being inexpensive.
@@ -65,22 +65,37 @@
         </div>
       </div>
 
-    <div class="tab-content">
-      <div class="myTableauViz">
-        <h2 style="text-align: center; color: rgb(42, 116, 42)">Bean Data Overview using Tableau</h2>
-        <br>
-        <div class='tableauPlaceholder' id='viz1623974986411' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;Dashboard-Measurementsv1&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Dashboard-Measurementsv1&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;Dashboard-Measurementsv1&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1623974986411');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-        <br>
+    <div class="row">
+      <h2 style="text-align: center; color: rgb(42, 116, 42)">Bean Data Overview using Tableau</h2>
+      <br>
+      <div class="tab-content">
+        <div class="myTableauViz">
+          <div class='tableauPlaceholder' id='viz1623974986411' style='position: relative'><noscript><a href='#'><img
+                  alt='Dashboard 1 '
+                  src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;Dashboard-Measurementsv1&#47;Dashboard1&#47;1_rss.png'
+                  style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+              <param name='embed_code_version' value='3' />
+              <param name='site_root' value='' />
+              <param name='name' value='Dashboard-Measurementsv1&#47;Dashboard1' />
+              <param name='tabs' value='no' />
+              <param name='toolbar' value='yes' />
+              <param name='static_image'
+                value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;Dashboard-Measurementsv1&#47;Dashboard1&#47;1.png' />
+              <param name='animate_transition' value='yes' />
+              <param name='display_static_image' value='yes' />
+              <param name='display_spinner' value='yes' />
+              <param name='display_overlay' value='yes' />
+              <param name='display_count' value='yes' />
+              <param name='language' value='en-US' />
+            </object></div>
+          <script
+            type='text/javascript'>var divElement = document.getElementById('viz1623974986411'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.minWidth = '420px'; vizElement.style.maxWidth = '650px'; vizElement.style.width = '100%'; vizElement.style.minHeight = '587px'; vizElement.style.maxHeight = '887px'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; } else if (divElement.offsetWidth > 500) { vizElement.style.minWidth = '420px'; vizElement.style.maxWidth = '650px'; vizElement.style.width = '100%'; vizElement.style.minHeight = '587px'; vizElement.style.maxHeight = '887px'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+          <br>
+        </div>
       </div>
     </div>
-
-
-  
-  <!-- D3 -->
-  <script src="https://d3js.org/d3.v6.min.js"></script>
-
-  <!-- apexcharts -->
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  </div>
 
   <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
