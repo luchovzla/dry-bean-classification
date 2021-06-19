@@ -21,18 +21,19 @@ h1 {
 /* .jumbotron {
     max-height : 580px;
 } */
+/* 
+div.myTableauViz {
 
-/* div.myTableauViz {
-    width: 950px;
-    margin-left: auto;
-    margin-right: auto;
 } */
 
-div.myTableauViz {
-    display: flex;
+.tab-content {
+    display: block;
     justify-content: center;
-    width: 100%;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 hr {
     border-color: cadetblue;
     height: 10px;
